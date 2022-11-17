@@ -21,11 +21,11 @@ using System.Linq;
 
 class RDFSA
 {
-    static void Main()
-    {
-        int[] asd = { 1, 1, 2 };
-        Console.WriteLine(MakegoodS(asd));
-    }
+  //  static void Main()
+  //  {
+  //      int[] asd = { 1, 1, 2 };
+  //      Console.WriteLine(MakegoodS(asd));
+  //  }
     public static int MakegoodS(int[] nums)
      {        
         int a = nums.Distinct().ToArray().Length;
