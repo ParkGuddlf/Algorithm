@@ -24,17 +24,21 @@ public class GNHL
     public static int GuessNumberHigherorLower(int n)
     {
         var i = 1;
-        var j = n;        
-  //    while (i<=j)
-  //    {
-  //        int mid = i+(j-i)/2;
-  //        if (guess(mid) > 0)
-  //            i = mid+1;
-  //        else if (guess(mid) < 0)
-  //            j = mid-1;
-  //        else
-  //            return mid;
-  //    }
+        var j = n;
+        while (i <= j)
+        {
+            int mid = i + (j - i) / 2;
+            if (guess(mid) > 0)
+                i = mid + 1;
+            else if (guess(mid) < 0)
+                j = mid - 1;
+            else
+                return mid;
+        }
         return -1;
+    }
+    static int guess(int n)
+    {
+        return 0;
     }
 }
