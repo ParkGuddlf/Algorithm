@@ -4,4 +4,4 @@ class Main_Static
     {        
         Console.WriteLine(FizzBuzz.Fizz_Buzz(3));
     }
-}
+} 
