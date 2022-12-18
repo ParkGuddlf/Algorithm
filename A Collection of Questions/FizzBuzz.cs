@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/fizz-buzz/
 public class FizzBuzz {
     public static IList<string> Fizz_Buzz(int n) {
          string[] _array = new string[n];

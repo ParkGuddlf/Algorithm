@@ -9,7 +9,7 @@
 
 입력: s = "aabb"
 출력: -1*/
-
+//https://leetcode.com/problems/first-unique-character-in-a-string/
 using System.Collections;
 
 public class FUCIS

@@ -17,6 +17,7 @@
  *               otherwise return 0
  * int guess(int num);
  */
+ //https://leetcode.com/problems/guess-number-higher-or-lower/
 using System;
 
 public class GNHL

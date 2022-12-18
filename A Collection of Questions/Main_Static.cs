@@ -2,6 +2,7 @@ class Main_Static
 {
     static void Main()
     {        
-        Console.WriteLine(FizzBuzz.Fizz_Buzz(3));
+        int[] arr = {5,4,8,6,7,2};
+        Console.WriteLine(Rob.solution(arr));
     }
 } 
