@@ -1,12 +1,27 @@
 ﻿// // See https://aka.ms/new-console-template for more information
-string[] strs = new string[] { "cba", "daf", "ghi" };
+var words = new string[] { "word","world","row" };
+var order = "worldabcefghijkmnpqstuvxyz";
 
-int deletArrayCount = 0;
-for (int i = 0; i < strs[0].Length; i++)
+Dictionary<char, int> dic = new Dictionary<char, int>();
+
+for (int i = 0; i < order.Length; i++)
 {
-    var asd = strs.Select(n=>n[i]);
-    if (!Enumerable.SequenceEqual(asd, asd.OrderBy(n => n)))
-        deletArrayCount++;
-
+    dic.Add(order[i], i);
 }
-Console.WriteLine(deletArrayCount);
+
+for (int i = 0; i < words.Length - 1; i++)
+{
+    var firstWord = words[i];
+    var secondWord = words[i + 1];
+    for (int j = 0; j < Math.Min(firstWord.Count(), secondWord.Count()); j++)
+    {
+        if (j == Math.Min(firstWord.Count(), secondWord.Count())-1 && firstWord.Count() < secondWord.Count())
+            Console.WriteLine("as");
+        if (dic[firstWord.ElementAt(j)] < dic[secondWord.ElementAt(j)])
+            break;
+        else if (dic[firstWord.ElementAt(j)] > dic[secondWord.ElementAt(j)])
+            Console.WriteLine("f");
+
+    }
+    Console.WriteLine("t");
+}
