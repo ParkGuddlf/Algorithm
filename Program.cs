@@ -1,27 +1,14 @@
-﻿// // See https://aka.ms/new-console-template for more information
-var words = new string[] { "word","world","row" };
-var order = "worldabcefghijkmnpqstuvxyz";
-
-Dictionary<char, int> dic = new Dictionary<char, int>();
-
-for (int i = 0; i < order.Length; i++)
+﻿int[] nums = { 2, 5, 1, 3, 4, 7 };
+int n = 3;
+int[] numssss = new int[nums.Length];
+for (int i = 0; i < n; i++)
 {
-    dic.Add(order[i], i);
-}
+    numssss[i*2] = nums.Take(n).ToArray()[i];
+    numssss[i*2+1] = nums.TakeLast(n).ToArray()[i];
 
-for (int i = 0; i < words.Length - 1; i++)
+}
+foreach (var item in numssss)
 {
-    var firstWord = words[i];
-    var secondWord = words[i + 1];
-    for (int j = 0; j < Math.Min(firstWord.Count(), secondWord.Count()); j++)
-    {
-        if (j == Math.Min(firstWord.Count(), secondWord.Count())-1 && firstWord.Count() < secondWord.Count())
-            Console.WriteLine("as");
-        if (dic[firstWord.ElementAt(j)] < dic[secondWord.ElementAt(j)])
-            break;
-        else if (dic[firstWord.ElementAt(j)] > dic[secondWord.ElementAt(j)])
-            Console.WriteLine("f");
-
-    }
-    Console.WriteLine("t");
+    Console.WriteLine(item);
 }
+    
